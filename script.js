@@ -18,7 +18,7 @@ window.addEventListener('scroll', () => {
 $(window).on("load",function() {
   $(window).scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".inner-Text").each(function() {
+    $("section-inner").each(function() {
       /* Check the location of each desired element */
       var objectBottom = $(this).offset().top + $(this).outerHeight();
       

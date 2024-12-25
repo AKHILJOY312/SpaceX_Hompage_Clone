@@ -1,146 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" type="image/x-icon" href="https://www.spacex.com/static/images/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceX Inspired Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <link rel="icon" type="image/x-icon" href="https://www.spacex.com/static/images/favicon.ico">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-</head>
-<body>
-    <header class="navigation">
-      <div id="overlay"></div>
-      <div id="mobile-menu" class="mobile-main-menu">
-        <ul>
-          <li class="mobile-only"><a href="./falcon9.html">FALCON 9</a></li>
-          <li class="mobile-only">
-            <a href="./falcon-heavy.html">FALCON HEAVY</a>
-          </li>
-          <li class="mobile-only"><a href="#">DRAGON</a></li>
-          <li class="mobile-only"><a href="#">STARSHIP</a></li>
-          <li class="mobile-only"><a href="#">HUMAN SPACEFLIGHT</a></li>
-          <li class="mobile-only"><a href="#">RIDESHARE</a></li>
-          <li class="mobile-only"><a href="#">STARSHIELD</a></li>
-          <li class="mobile-only"><a href="#">STARLINK</a></li>
-          <li><a href="#">MISSION</a></li>
-          <li><a href="#">LAUNCHES</a></li>
-          <li><a href="#">CAREERS</a></li>
-          <li><a href="#">UPDATES</a></li>
-          <li><a href="#">SHOP</a></li>
-  
-          
-        </ul>
-      </div>
-      <header class="main-header">
-        <div class="logo">
-          <a href="/">
-            <img src="./Assets/logo.png" alt="SpaceX" />
-          </a>
-        </div>
-        <nav class="desktop-main-menu">
-          <ul>
-            <li><a href="./falcon9.html">FALCON 9</a></li>
-            <li><a href="./falcon-heavy.html">FALCON HEAVY</a></li>
-            <li><a href="./dragon.html">DRAGON</a></li>
-            <li><a href="#">STARSHIP</a></li>
-            <li><a href="#">HUMAN SPACEFLIGHT</a></li>
-            <li><a href="#">RIDESHARE</a></li>
-            <li><a href="#">STARSHIELD</a></li>
-            <li><a href="#">STARLINK</a></li>
-            <li><a href="#">SHOP</a></li>
-          </ul>
-        </nav>
-      </header>
-  
-      <!-- Hamburger Menu -->
-      <button id="menu-btn" class="hamburger" type="button">
-        <span class="hamburger-top"></span>
-        <span class="hamburger-middle"></span>
-        <span class="hamburger-bottom"></span>
-      </button>
-    
-       
-          
-   
-          
-
-          
+    <title>SpaceX</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div class="navigation">
+    <div id="mobile-menu" class="mobile-main-menu">
+      <ul>
         
+        <li class="mobile-only"><a href="./falcon9.html">FALCON 9</a></li>
+        <li class="mobile-only">
+          <a href="./falcon-heavy.html">FALCON HEAVY</a>
+        </li>
+        <li class="mobile-only"><a href="./dragon.html">DRAGON</a></li>
+        <li class="mobile-only"><a href="#">STARSHIP</a></li>
+        <li class="mobile-only"><a href="#">HUMAN SPACEFLIGHT</a></li>
+        <li class="mobile-only"><a href="#">RIDESHARE</a></li>
+        <li class="mobile-only"><a href="#">STARLINK</a></li>
+        <li><a href="#">MISSION</a></li>
+        <li><a href="#">LAUNCHES</a></li>
+        <li><a href="#">CAREERS</a></li>
+        <li><a href="#">UPDATES</a></li>
+        <li><a href="#">SHOP</a></li>
+
+      </ul>
+    </div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="/">
+          <img src="./assets/logo.png" alt="SpaceX" />
+        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="./falcon9.html">FALCON 9</a></li>
+          <li><a href="./falcon-heavy.html">FALCON HEAVY</a></li>
+          <li><a href="./dragon.html">DRAGON</a></li>
+          <li><a href="#">STARSHIP</a></li>
+          <li><a href="#">HUMAN SPACEFLIGHT</a></li>
+          <li><a href="#">RIDESHARE</a></li>
+          <li><a href="#">STARLINK</a></li>
+          <li><a href="#">SHOP</a></li>
+        </ul>
+      </nav>
+    
     </header>
 
-    <main>
-        <!-- Starship's Sixth Flight Test -->
-        <section  id="partOne">
-            <span class="background-video" role="img"  style="background-image: url(&quot;https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_06_Launch_Snchz_Tracking_20241119_DSC_05744_website_H_61b601fd9d.jpg&quot;);">
-                <video aria-hidden="true"  data-content-video="true" poster="https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_06_Launch_Snchz_Tracking_20241119_DSC_05744_website_H_61b601fd9d.jpg" muted="" playsinline="" loop="" autoplay="">
-                  <source type="video/mp4" src="https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_6_West_Drone_20241119_website_H_email_aebad7e040.mp4">
-                </video>
-              </span>
-            
-        <div class="inner-Text">
-            <p>RECENT LAUNCH</p>
-            <h1>Starship's Sixth <br>Flight Test</h1>
-            <button class="button-up">Rewatch</button>
-        </div>
+    <!-- Hamburger Menu -->
+    <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </div>
+    <!-- Starship's Sixth Flight Test -->
+    <section class="section-a">
+      <span class="background-video" role="img"  style="background-image: url(&quot;https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_06_Launch_Snchz_Tracking_20241119_DSC_05744_website_H_61b601fd9d.jpg&quot;);">
+        <video aria-hidden="true"  data-content-video="true" poster="https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_06_Launch_Snchz_Tracking_20241119_DSC_05744_website_H_61b601fd9d.jpg" muted="" playsinline="" loop="" autoplay="">
+          <source type="video/mp4" src="https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_6_West_Drone_20241119_website_H_email_aebad7e040.mp4">
+        </video>
+      </span>
+      <div class="section-inner">
+        <h4>RECENT LAUNCH</h4>
+        <h2>Starship's Sixth <br>Flight Test</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>REWATCH</span>
+        </a>
+      </div>
 
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
+    </section>
 
-       </section>
+    <!-- NROL-126 Mission -->
+    <section class="section-b">
+      <div class="section-inner">
+        <h4>RECENT LAUNCH</h4>
+        <h2>NROL-126 Mission</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>REWATCH</span>
+        </a>
+      </div>
 
-       <!-- NROL-126 Mission -->
-       <section  id="partTwo">
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Starlink Mission -->
+    <section class="section-c">
+      <div class="section-inner">
+        <h4>RECENT MISSION</h4>
+        <h2> STARLINK MISSION</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>REWATCH</span>
+        </a>
+      </div>
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ADVANCING HUMAN SPACEFLIGHT -->
+    <section class="section-d">
+      <div class="section-inner">
         
+        <h2>ADVANCING <br>HUMAN <br>SPACEFLIGHT</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>LEARN MORE</span>
+        </a>
+      </div>
 
-        <div class="inner-Text">
-            
-            <p>RECENT LAUNCH</p>
-            <h1>NROL-126 Mission</h1>
-            <button class="button-up">Rewatch</button>
-        </div>
-       </section>
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
+    </section>
 
-       <!-- Starlink Mission -->
-       <section  id="partThree">
+    <!-- TO MAKE LIFE MULTIPLANETARY -->
+    <section class="section-e">
+      <div class="section-inner">
+        <h2>TO MAKE LIFE <br>MULTIPLANETARY</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>LEARN MORE</span>
+        </a>
+      </div>
 
-        <div class="inner-Text">
-            <p>RECENT LAUNCH</p>
-            <h1>Starlink Mission</h1>
-            <button class="button-up">Rewatch</button>
-        </div>
-       </section>
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
+    </section>
 
-       <!-- ADVANCING HUMAN SPACEFLIGHT -->
-       <section  id="partFour">
+    
+  
 
-        <div class="inner-Text">
-            
-            <h1>ADVANCING <br>HUMAN <br>SPACEFLIGHT</h1>
-            <button class="button-up">learn more</button>
-        </div>
-       </section>
-
-       <!-- TO MAKE LIFE MULTIPLANETARY -->
-       <section  id="partFive">
-
-        <div class="inner-Text">
-            
-            <h1>TO MAKE LIFE <br>MULTIPLANETARY</h1>
-            <button class="button-up">learn more</button>
-        </div>
-       </section>
-        
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <div class="for-Text">
-            <div class="copy-right">SpaceX © 2024 </div>
-            <div class="item">PRIVACY POLICY</div>
-            <div class="item"> SUPPLIERS</div>
-        </div>
-    
+      <ul>
+        <li>SpaceX © 2022</li>
+        <li><a href="#">PRIVACY</a></li>
+        <li><a href="#">SUPPLIERS</a></li>
+      </ul>
     </footer>
-    <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
