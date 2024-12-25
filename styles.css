@@ -264,7 +264,7 @@
   
   footer {
     position: relative;
-    padding: 5px 0;
+    padding: 10px 0;
   }
   
   footer ul {
@@ -547,10 +547,12 @@
       top: 30px;
       left: 50%;
       transform: translate(-50%, -50%);
+      bottom: 10px;
     }
   
     footer ul li {
       margin-right: 15px;
+      font-size: 10px;
     }
   
     .logo {
