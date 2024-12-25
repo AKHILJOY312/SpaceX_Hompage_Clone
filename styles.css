@@ -40,6 +40,7 @@ body{
     font-family: D-DIN-Bold, Arial, Verdana, sans-serif;
     overflow-y: scroll;   
     background-color: black;
+    overflow-x: hidden;
 }
 
 
@@ -58,16 +59,11 @@ body{
   transition: background-color 0.3s, opacity 0.3s;  /* Smooth  */
 }
 .navigation.transparent {
-  background-color: transparent; /* Semi-transparent background */
+  background-color: transparent; /* transparent background */
   opacity: 0; /* Reduced visibility */
 }
 
-.logo svg {
-  width: 210px;
-  height: auto;
-  
-  fill: white;
-}
+
 
 /* Navbar Styles */
 .navbar ul {
@@ -108,21 +104,204 @@ body{
   transform-origin: left center;
 }
 
-
-/* Hamburger Icon */
-.hamburger {
-  fill: white;
-  cursor: pointer;
-  margin-left: 25px;
-  
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.hamburger svg {
-  width: 18px;
+ul {
+  list-style: none;
+}
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  width: 100%;
+  height: 100px;
+  padding: 0 30px;
+}
+/* Logo */
+
+.logo {
+  width: 210px;
   height: auto;
-  
-
 }
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop Menu */
+
+.desktop-main-menu {
+  margin-right: 75px;
+  
+}
+
+.desktop-main-menu ul {
+  display: flex;
+}
+
+.desktop-main-menu ul li {
+  position: relative;
+  margin-right: 20px;
+  padding-bottom: 2px;
+}
+
+/* Menu Item Bottom Border */
+
+.desktop-main-menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+}
+
+.desktop-main-menu ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition-duration: 0.4s;
+}
+  
+.hamburger {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(5px);
+}
+
+.hamburger-bottom {
+  transform: translateY(10px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* Overlay */
+
+.overlay-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+/* Hide Mobile Main Items */
+
+.mobile-only {
+  display: none;
+}
+
+/* Mobile Menu */
+
+.mobile-main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background-color: black;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Bring Menu from Right */
+
+.show-menu {
+  transform: translateX(0);
+}
+
+.mobile-main-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.mobile-main-menu ul li {
+  border-bottom: 1px dotted #555;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  text-align: right;
+  width: 100%;
+}
+
+.mobile-main-menu ul li a {
+  color: #fff;
+  transition: color 0.6s;
+}
+
+.mobile-main-menu ul li a:hover {
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 150px;
+    margin: auto;
+  }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -145,13 +324,27 @@ body{
     display: block;
   }
 }
+
+@media (max-width: 960px) {
+  /* Hide Desktop Menu */
+
+  .desktop-main-menu {
+    display: none;
+  }
+
+  /* Show Mobile Main Items */
+
+  .mobile-only {
+    display: block;
+  }
+}
 h1{
     text-transform: uppercase;
     font-size: 48px;
     margin-top: 0;
 
 }
- button{
+section button{
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid white;
@@ -163,7 +356,7 @@ h1{
   overflow: hidden; /* Prevent pseudo-element overflow */
   z-index: 1; /* Ensure the button content is on top */
 }
-button::after{
+section button::after{
   content: "";
   position: absolute;
   bottom: 0;
@@ -177,12 +370,12 @@ button::after{
   z-index: -1;
   
 }
- button:hover{
+section button:hover{
   cursor: pointer;
   color: black;
 }
 
-button:hover:after{
+section button:hover:after{
   transform: scaleY(1);
   transform-origin: bottom center;
   
@@ -213,8 +406,8 @@ button:hover:after{
     z-index:-1;
     top:0;
     left:0;
-    width:100%; 
-    height:150vh;
+    height: 100vh;
+      width: auto;
 }
   #partTwo{
     background-image: url('./Assets/NROL_126_OS_56_Wide_Streak_6812_Desktop_57a6be2bbf.jpg');
