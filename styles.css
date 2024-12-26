@@ -1,39 +1,4 @@
-@font-face {
-    font-family: D-DIN-Medium;
-    src: url(fonts/D-DIN.woff2) format("woff2"),
-      url(fonts/D-DIN.woff) format("woff"),
-      url(fonts/D-DIN.otf) format("opentype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-  }
-  @font-face {
-    font-family: D-DIN-Light;
-    src: url(fonts/D-DIN.woff2) format("woff2"),
-      url(fonts/D-DIN.woff) format("woff"),
-      url(fonts/D-DIN.otf) format("opentype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-  }
-  @font-face {
-    font-family: D-DIN-Bold;
-    src: url(fonts/D-DIN-Bold.woff2) format("woff2"),
-      url(fonts/D-DIN-Bold.woff) format("woff"),
-      url(fonts/D-DIN-Bold.otf) format("opentype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-  }
-  @font-face {
-    font-family: D-DIN-Regular;
-    src: url(fonts/D-DIN.woff2) format("woff2"),
-      url(fonts/D-DIN.woff) format("woff"),
-      url(fonts/D-DIN.otf) format("opentype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-  }
+
 
   @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap');
 
@@ -134,7 +99,7 @@
     transition-duration: 0.4s;
   }
   .navigation{
-    transition: ease-in-out;
+    transition: background-color 0.3s, opacity 0.3s;
   }
   .navigation.transparent {
     background-color: transparent; /* transparent background */
@@ -144,7 +109,7 @@
   /* Sections */
   
   section {
-    position: relative;
+    /* position: relative; */
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,7 +117,7 @@
   }
   
   .section-inner {
-    position: absolute;
+    /* position: absolute; */
     bottom: 100px;
     left: 150px;
     max-width: 560px;
@@ -217,7 +182,7 @@
     background-image: url('../assets/images/section-f.webp');
   }
   
-  .btn {
+  .btnX {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -231,11 +196,11 @@
     z-index: 2;
   }
   
-  .btn:hover span {
+  .btnX:hover span {
     color: var(--color-black);
   }
   
-  .btn .hover {
+  .btnX .hover {
     position: absolute;
     top: 0;
     left: 0;
@@ -248,7 +213,7 @@
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   }
   
-  .btn:hover .hover {
+  .btnX:hover .hover {
     transform: translateY(0);
   }
   
